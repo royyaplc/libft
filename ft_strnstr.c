@@ -23,17 +23,19 @@ char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 {
 	size_t	i;
 	size_t	j;
+	char	*ret;
 
+	ret = (char *)str1;
 	if (str2 == NULL)
-		return (str1);
+		return (ret);
 	i = 0;
-	while (i < len && str1[i])
+	while (i < len && ret[i])
 	{
 		j = 0;
-		while (str1[i + j] == str2[j] && str1[i + j] && (i + j) < len)
+		while (ret[i + j] == str2[j] && ret[i + j] && (i + j) < len)
 		{
 			if (str2[j + 1] == '\0')
-				return (&str1[i]);
+				return (ret + i);
 			++j;
 		}
 	++i;

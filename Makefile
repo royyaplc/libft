@@ -42,9 +42,11 @@ CFLAGS	= -Wall -Werror -Wextra
 
 RM		= rm -f
 
+AR		= ar rc
+
 $(NAME):	${OBJS}
 				${CC} ${CFLAGS} -c ${SRCS}
-				ar rc ${NAME} ${OBJS} libft.h
+				${AR} ${NAME} ${OBJS} libft.h
 
 all:		${NAME}
 
