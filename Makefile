@@ -37,8 +37,8 @@ OBJS	= ${SRCS:.c=.o}
 
 NAME	= libft.a
 
-CC		= gcc
-CFLAGS	= -Wall -Werror Wextra
+CC		= cc
+CFLAGS	= -Wall -Werror -Wextra
 
 RM		= rm -f
 
@@ -56,6 +56,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY		all clean fclean re
-
-	
+.PHONY:		all clean fclean re

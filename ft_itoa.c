@@ -64,7 +64,6 @@ static void	ft_convert(char *output, int len, long nbr)
 char	*ft_itoa(int n)
 {
 	long int	nbr;
-	int			i;
 	int			len;
 	char		*output;
 

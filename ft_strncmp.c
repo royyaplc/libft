@@ -18,7 +18,7 @@ The function ft_strncmp() compares at most the first n bytes of str1 and str2.
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str1[i] && str2[i] && i < n)

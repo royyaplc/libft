@@ -18,7 +18,7 @@
 
 #include "libft.h"
 
-void	*ft_bzero(void *ptr, size_t n)
+void	ft_bzero(void *ptr, size_t n)
 {
 	size_t	i;
 	char	*char_ptr;
@@ -30,5 +30,4 @@ void	*ft_bzero(void *ptr, size_t n)
 		char_ptr[i] = '\0';
 		i++;
 	}
-	return (ptr);
 }
