@@ -29,6 +29,6 @@ char	*ft_strchr(char *str, int ch)
 		i++;
 	}
 	if (ch == '\0')
-		return ((char *)str[i]);
+		return ((char *)&str[i]);
 	return (NULL);
 }
