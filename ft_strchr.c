@@ -19,11 +19,12 @@ of the character ch in the string str.
 
 char	*ft_strchr(char *str, int ch)
 {
-	int	i;
+	int		i;
+	char	*ret;
 
 	i = 0;
-	if (!str)
-		return (NULL);
+	if (ch == '\0')
+		return ((char *)str);
 	while (str[i])
 	{
 		if (str[i] == ch)
