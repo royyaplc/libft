@@ -22,6 +22,8 @@ char	*ft_strchr(char *str, int ch)
 	int	i;
 
 	i = 0;
+	if (!str)
+		return (NULL);
 	while (str[i])
 	{
 		if (str[i] == ch)
