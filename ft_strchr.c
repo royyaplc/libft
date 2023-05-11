@@ -19,8 +19,7 @@ of the character ch in the string str.
 
 char	*ft_strchr(char *str, int ch)
 {
-	int		i;
-	char	*ret;
+	int	i;
 
 	i = 0;
 	if (ch == '\0')
