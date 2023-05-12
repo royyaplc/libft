@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:43:53 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/09 14:12:31 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/11 21:42:48 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ representing the integer received as an argument.
 Negative numbers must be handled.
 */
 
-#include "libft.h"
+//#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /*
 Function to find the length of int n. Add 1 for -ve numbers for
@@ -27,6 +29,8 @@ static int	ft_num_length(long n)
 	int	len;
 
 	len = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 		++len;
 	while (n != 0)

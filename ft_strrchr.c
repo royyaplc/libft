@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:36:48 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/08 15:38:38 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/11 21:20:42 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ the character ch in the string str.
 
 char	*ft_strrchr(const char *str, int ch)
 {
-	int		i;
+	size_t	i;
 	int		pos;
 
 	i = 0;
 	pos = -1;
 	if (str == NULL)
 		return (NULL);
-	while (str[i])
+	while (i <= ft_strlen(str))
 	{
 		if (str[i] == ch)
 			pos = i;

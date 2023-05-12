@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:41:23 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/08 15:46:05 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/11 21:05:29 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 	char	*ret;
 
 	ret = (char *)str1;
-	if (str2 == NULL)
+	if (ft_strlen(str2) == 0)
 		return (ret);
 	i = 0;
 	while (i < len && ret[i])
 	{
 		j = 0;
-		while (ret[i + j] == str2[j] && ret[i + j] && (i + j) < len)
+		while (ret[i + j] == str2[j] && str2[j] && i + j < len)
 		{
 			if (str2[j + 1] == '\0')
 				return (ret + i);
