@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:43:53 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/11 21:42:48 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 12:12:08 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ representing the integer received as an argument.
 Negative numbers must be handled.
 */
 
-//#include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 /*
 Function to find the length of int n. Add 1 for -ve numbers for
