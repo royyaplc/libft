@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 16:06:04 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/09 10:21:59 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/12 17:44:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,6 @@ char	**ft_split(char const *s, char c)
 		j = j + wordlen;
 		++i;
 	}
-	split[i] = '\0';
+	split[i] = 0;
 	return (split);
 }
