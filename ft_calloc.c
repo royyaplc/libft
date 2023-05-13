@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyap <lyap@student.42kl.edu.my>            +#+  +:+       +#+        */
+/*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 13:53:12 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/06 13:53:17 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/13 12:37:43 by lyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
+	if (count == SIZE_MAX && size == SIZE_MAX)
+		return (NULL);
 	ptr = malloc(count * size);
 	if (ptr == NULL)
-		return (ptr);
+		return (NULL);
 	ft_bzero(ptr, count * size);
 	return (ptr);
 }
