@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyap <lyap@student.42kl.edu.my>            +#+  +:+       +#+        */
+/*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:23:45 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/12 18:09:20 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/13 14:14:06 by lyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	dest_len;
 	size_t	src_len;
 
+	if (!size)
+		return (0);
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	i = 0;

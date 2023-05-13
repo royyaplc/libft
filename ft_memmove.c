@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyap <lyap@student.42kl.edu.my>            +#+  +:+       +#+        */
+/*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:24:08 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/12 18:08:26 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/13 13:20:53 by lyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	char_dest = (char *)dest;
 	char_src = (char *)src;
 	if (char_dest > char_src)
