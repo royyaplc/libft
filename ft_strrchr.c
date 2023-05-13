@@ -6,7 +6,7 @@
 /*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:36:48 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/13 12:13:41 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/13 13:04:37 by lyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *str, int ch)
 	int				pos;
 
 	i = 0;
-	char_str = (unsigned char*)str;
+	char_str = (unsigned char *)str;
 	pos = -1;
 	if (str == NULL)
 		return (NULL);
