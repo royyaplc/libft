@@ -6,7 +6,7 @@
 /*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:23:45 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/13 14:14:06 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/13 15:16:04 by lyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,12 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	src_len;
 
 	if (!size)
-		return (0);
+	{
+		if (!dest)
+			return (0);
+		else
+			return (ft_strlen(src));
+	}
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	i = 0;

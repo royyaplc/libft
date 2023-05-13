@@ -6,7 +6,7 @@
 /*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:49:16 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/08 15:51:42 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/13 14:22:32 by lyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ char	*ft_strdup(const char *str)
 	char	*target;
 	size_t	i;
 
-	if (str == NULL)
-		return (NULL);
 	target = malloc(sizeof(char) * ft_strlen(str) + 1);
 	if (target == NULL)
 		return (NULL);
