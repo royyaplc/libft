@@ -6,7 +6,7 @@
 /*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 15:53:40 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/14 16:25:52 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/14 17:38:52 by lyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ list resulting of the successive applications of
 the function ’f’. The ’del’ function is used to
 delete the content of a node if needed.
 */
+
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -37,5 +39,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		}
 		lst = lst->next;
 	}
-	return (new_lst);
+	return (new_list);
 }

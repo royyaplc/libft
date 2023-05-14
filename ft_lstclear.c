@@ -6,7 +6,7 @@
 /*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 15:16:55 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/14 15:45:16 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/14 17:36:46 by lyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ and free(3).
 Finally, the pointer to the list must be set to
 NULL.
 */
+
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

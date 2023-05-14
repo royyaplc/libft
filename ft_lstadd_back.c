@@ -6,13 +6,15 @@
 /*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 14:45:40 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/14 14:56:46 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/14 17:38:19 by lyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 Adds the node ’new’ at the end of the list.
 */
+
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -22,7 +24,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 	else
 	{
-		last_node = ft_lstlast(*lst);
-		last_node->next = *new;
+		last_node = ft_lstlast(*(lst));
+		last_node->next = new;
 	}
 }
