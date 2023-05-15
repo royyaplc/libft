@@ -33,7 +33,7 @@ SRCS	= ft_atoi.c \
 			ft_tolower.c \
 			ft_toupper.c
 
-OBJS	= ${SRCS:.c=.o}
+OBJS	= $(SRCS:.c=.o)
 
 BSRCS	= ft_lstnew.c \
 		  ft_lstadd_front.c \
@@ -45,7 +45,7 @@ BSRCS	= ft_lstnew.c \
 		  ft_lstiter.c \
 		  ft_lstmap.c
 
-BOBJS	= ${BSRCS:.c=.o}
+BOBJS	= $(BSRCS:.c=.o)
 
 NAME	= libft.a
 
@@ -54,23 +54,29 @@ CFLAGS	= -Wall -Werror -Wextra
 
 RM		= rm -f
 
-AR		= ar rc
+AR		= ar
+ARFLAGS	= rc
 
-$(NAME):	${OBJS}
-				${CC} ${CFLAGS} -c ${SRCS}
-				${AR} ${NAME} ${OBJS} libft.h
+all:		$(NAME) bonus
 
-all:		${NAME} bonus
+$(NAME): 	$(OBJS)
+				$(AR) $(ARFLAGS) $@ $^
+
+bonus:		$(BOBJS) $(OBJS)
+				$(AR) $(ARFLAGS) $(NAME) $^
+
+$(OBJS):	%.o: %.c
+				$(CC) $(CFLAGS) -c $< -o $@
+
+$(BOBJS):	%.o: %.c
+				$(CC) $(CFLAGS) -c $< -o $@
+
 clean:		
-				${RM} ${OBJS} ${BOBJS}
+				$(RM) $(OBJS) $(BOBJS)
 
 fclean:		clean
-				${RM} ${NAME}
+				$(RM) $(NAME)
 
 re:			fclean all
-
-bonus:		${BOBJS}
-			${CC} ${CFLAGS} -c ${BSRCS}
-			ar rc ${NAME} ${BOBJS} libft.h
 
 .PHONY:		all clean fclean re
