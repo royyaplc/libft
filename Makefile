@@ -57,7 +57,7 @@ RM		= rm -f
 AR		= ar
 ARFLAGS	= rc
 
-all:		$(NAME) bonus
+all:		$(NAME)
 
 $(NAME): 	$(OBJS)
 				$(AR) $(ARFLAGS) $@ $^
