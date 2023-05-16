@@ -6,7 +6,7 @@
 /*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 10:36:05 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/09 11:04:03 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/16 11:00:04 by lyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	char	*ret;
 
-	if (s == NULL)
+	if (s == NULL || f == NULL)
 		return (NULL);
 	ret = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!ret)

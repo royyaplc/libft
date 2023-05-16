@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyap <lyap@student.42kl.edu.my>            +#+  +:+       +#+        */
+/*   By: lyap <lyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 16:06:04 by lyap              #+#    #+#             */
-/*   Updated: 2023/05/12 18:09:05 by lyap             ###   ########.fr       */
+/*   Updated: 2023/05/16 11:15:36 by lyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ static size_t	ft_word_count(char const *s, char c)
 	size_t	wordcount;
 	int		newword;
 
+	if (!s)
+		return (0);
 	i = 0;
 	wordcount = 0;
 	newword = 1;
